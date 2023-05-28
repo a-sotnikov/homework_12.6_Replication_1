@@ -1,0 +1,21 @@
+services:
+  mysql-one:
+    container_name: replication-master-one
+    build: .
+    volumes:
+      - ./dump:/mysql_dump
+    networks:
+      - replication
+
+  mysql-two:
+    container_name: replication-master-two
+    build: .
+    volumes:
+      - ./dump:/mysql_dump
+    networks:
+      - replication
+
+
+networks:
+  replication:
+    name: replication

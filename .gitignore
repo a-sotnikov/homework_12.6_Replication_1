@@ -34,3 +34,6 @@ override.tf.json
 terraform.rc
 
 .markdownlint.json
+
+dump
+docs
